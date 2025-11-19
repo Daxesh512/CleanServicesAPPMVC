@@ -1,0 +1,67 @@
+﻿@model  CleanServicesAPPMVC.Models.TblUser
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+
+<center style="background-color:Black">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    @using (Html.BeginForm("Registration", "Home", FormMethod.Post))
+    {
+
+        <table style="background-color:greenyellow; height:350px; width:300px; font:200; border-block-color:white;">
+            <tr>
+                <td align="center" colspan="2">RegisterNow</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.personName)</td>
+                <td>@Html.TextBoxFor(m => m.personName)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.userName)</td>
+                <td>@Html.TextBoxFor(m => m.userName)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.phone)</td>
+                <td>@Html.TextBoxFor(m => m.phone)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.password)</td>
+                <td>@Html.TextBoxFor(m => m.password)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.postalCode)</td>
+                <td>@Html.TextBoxFor(m => m.postalCode)</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="Submit" value="Registration" />&nbsp;&nbsp;
+                    @*<input type="Submit" value="Sign In" id="btnSignUp" />*@
+                    <input type="button" value="Login" onclick="window.location='@Url.Action("Login", "Home")'" />
+
+                </td>
+            </tr>
+        </table>
+
+    }
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</center>
+
+
+
+
+
+
+
